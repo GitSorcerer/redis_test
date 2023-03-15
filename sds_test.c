@@ -14,10 +14,16 @@ int main(){
     show(s);
 
 
-    sdscat(s, ",world");
+    //连接字符串
+    sdscat(s, ",world");//len 12 free 30-12=18
     show(s);
 
+
+    //copy字符串
     sdscpy(s, "nihao,gaoh");
+    show(s);
+
+    sdscatprintf(s,"%d,%d,%s,%d",7,8,"world",9); 
     show(s);
 
     return 0;
